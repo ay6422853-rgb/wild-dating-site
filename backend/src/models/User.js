@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema({
   maxAge: { type: Number, min: 18, max: 100, default: 60 },
   maxDistanceKm: { type: Number, min: 1, max: 500, default: 50 },
   role: { type: String, enum: ["USER", "ADMIN"], default: "USER" },
-  status: { type: String, enum: ["ACTIVE", "SUSPENDED", "DELETED"], default: "SUSPENDED" },
+  status: { type: String, enum: ["ACTIVE", "SUSPENDED", "DELETED"], default: "ACTIVE" },
   emailVerified: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
   lastActiveAt: { type: Date, default: Date.now }
